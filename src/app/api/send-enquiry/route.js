@@ -16,10 +16,7 @@ export async function POST(request) {
       auth: {
         user: process.env.M365_EMAIL,
         pass: process.env.M365_PASSWORD
-      },
-      tls: {
-      ciphers: 'SSLv3',
-    },
+      }
     });
 
     const success = await transporter.verify();
