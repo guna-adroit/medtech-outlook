@@ -15,7 +15,7 @@ export async function POST(request) {
       secure: false,
       auth: {
         user: process.env.M365_EMAIL,
-        pass: process.env.M365_PASSWORD
+        pass: process.env.MAIL_PASS1
       }
     });
 
