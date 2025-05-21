@@ -23,6 +23,7 @@ export async function POST(request) {
     const success = await transporter.verify();
     console.log('Transporter ready?', success);
 
+    
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: seller_email,
