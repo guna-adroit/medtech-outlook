@@ -10,14 +10,16 @@ export async function POST(request) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: 'Outlook365',
       host: "smtp.office365.com",
       port: 587,
       secure: false,
       auth: {
         user: process.env.MAIL_USER1,
         pass: process.env.MAIL_PASS1
-      }
+      },
+      tls: {
+      ciphers: 'SSLv3',
+    },
     });
 
     const success = await transporter.verify();
