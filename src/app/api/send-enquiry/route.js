@@ -10,13 +10,13 @@ export async function POST(request) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+      service: 'Outlook365',
+      host: "smtp.office365.com",
+      port: 587,
+      secure: false,
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS
+        user: process.env.MAIL_USER1,
+        pass: process.env.MAIL_PASS1
       }
     });
 
