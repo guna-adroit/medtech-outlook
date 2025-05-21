@@ -14,8 +14,8 @@ export async function POST(request) {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.MAIL_USER1,
-        pass: process.env.MAIL_PASS1
+        user: process.env.M365_EMAIL,
+        pass: process.env.M365_PASSWORD
       },
       tls: {
       ciphers: 'SSLv3',
