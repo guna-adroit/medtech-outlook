@@ -36,7 +36,7 @@ export async function POST() {
   const product_title = 'Ergonomic Chair';
   const product_url = 'https://example.com/products/ergonomic-chair';
   const product_variant = 'Black - High Back';
-  const seller_email = 'seller@example.com';
+  const seller_email = 'gunahost@gmail.com';
 
   try {
     await sendEmail({
