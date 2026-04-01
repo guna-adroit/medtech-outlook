@@ -27,22 +27,3 @@ export default function WebhookTestPage() {
     </div>
   );
 }
-```
-
----
-
-**Then in Shopify Admin, register the webhook:**
-```
-Settings → Notifications → Webhooks
-→ Create webhook
-   Topic:   Order creation
-   URL:     https://your-vercel-app.vercel.app/api/webhook/shopify
-   Format:  JSON
-```
-
-**To get your `SHOPIFY_WEBHOOK_SECRET`,** copy the signing secret shown after creating the webhook in Shopify Admin, then add it to Vercel:
-```
-Vercel Dashboard → Your Project → Settings → Environment Variables
-→ SHOPIFY_WEBHOOK_SECRET = <paste secret here>
-→ SHOPIFY_ACCESS_TOKEN   = <your dev dashboard token>
-→ SHOPIFY_SHOP_DOMAIN    = yourstore.myshopify.com
